@@ -1,0 +1,48 @@
+/* ==========================================================================
+   VARIABLES — дизайн-система NikaTravel
+   ========================================================================== */
+
+:root {
+  /* ---------- Кольори ---------- */
+  --color-primary: #B5651D;
+  --color-primary-dark: #9C5216;
+  --color-bg-cream: #F7EBD9;
+  --color-white: #FFFFFF;
+  --color-text: #303030;
+  --color-text-muted: #6B6B6B;
+  --color-border: #E8C9A6;
+
+  /* ---------- Шрифти ---------- */
+  --font-base: "Inter", sans-serif;
+
+  --fs-h1: 48px;
+  --fs-h2: 32px;
+  --fs-h3: 20px;
+  --fs-lg: 18px;
+  --fs-base: 16px;
+  --fs-sm: 14px;
+  --fs-xs: 12px;
+
+  --lh-base: 1.5;
+  --lh-tight: 1.2;
+
+  /* ---------- Відступи ---------- */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --section-py: 88px;
+
+  /* ---------- Інше ---------- */
+  --container: 1360px;
+  --header-h: 84px;
+  --radius: 6px;
+  --radius-sm: 6px;
+  --shadow-card: 0 4px 16px rgba(0, 0, 0, .06);
+  --shadow-card-hover: 0 12px 28px rgba(0, 0, 0, .12);
+  --transition: .2s ease;
+}

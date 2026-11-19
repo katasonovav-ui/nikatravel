@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="NikaTravel — команда, що створює подорожі, які хочеться повторити. 8 років досвіду, 1200+ клієнтів.">
+  <title>Про нас — NikaTravel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/mobile.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <input class="nav-toggle visually-hidden" id="nav-toggle" type="checkbox" aria-label="Відкрити меню" aria-controls="mobile-nav">
+    <div class="container header__inner">
+      <label class="burger" for="nav-toggle" aria-hidden="true">
+        <svg class="burger__icon burger__icon--open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <svg class="burger__icon burger__icon--close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </label>
+      <a href="index.html" class="logo" aria-label="NikaTravel — на головну">
+        <img class="logo__globe" src="images/globe.svg" alt="" width="28" height="28">
+        <span>Nika<span class="logo__accent">Travel</span></span>
+      </a>
+      <nav class="nav" aria-label="Головна навігація">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Головна</a></li>
+          <li><a class="nav__link" href="tours.html">Тури</a></li>
+          <li><a class="nav__link nav__link--active" href="about.html" aria-current="page">Про нас</a></li>
+          <li><a class="nav__link" href="contacts.html">Контакти</a></li>
+        </ul>
+      </nav>
+      <a href="contacts.html" class="btn btn--primary header__cta">Підібрати тур</a>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Мобільна навігація">
+      <ul class="mobile-nav__list">
+        <li><a class="mobile-nav__link" href="index.html">Головна</a></li>
+        <li><a class="mobile-nav__link" href="tours.html">Тури</a></li>
+        <li><a class="mobile-nav__link mobile-nav__link--active" href="about.html" aria-current="page">Про нас</a></li>
+        <li><a class="mobile-nav__link" href="contacts.html">Контакти</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="about-hero" aria-labelledby="about-title">
+      <div class="container about-hero__inner">
+        <div class="about-hero__content">
+          <h1 class="about-hero__title" id="about-title">Ми створюємо подорожі, які хочеться повторити</h1>
+          <p class="about-hero__text">NikaTravel — команда людей, закоханих у мандрівки. Ми уважно слухаємо, ретельно плануємо і супроводжуємо вас на кожному етапі, щоб відпочинок став саме таким, яким ви його уявляли.</p>
+          <a href="tours.html" class="btn btn--primary btn--lg">Наші тури</a>
+        </div>
+        <figure class="about-hero__media">
+          <img class="about-hero__img" src="images/travelers.jpg" alt="Усміхнені друзі-мандрівники з рюкзаками на тлі гір" width="568" height="400">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ==================== СТАТИСТИКА ==================== -->
+    <section class="stats" aria-label="NikaTravel у цифрах">
+      <div class="container">
+        <ul class="stats__list">
+          <li class="stats__item"><span class="stats__value">8</span><span class="stats__label">років досвіду</span></li>
+          <li class="stats__item"><span class="stats__value">1200+</span><span class="stats__label">задоволених клієнтів</span></li>
+          <li class="stats__item"><span class="stats__value">35</span><span class="stats__label">країн та напрямків</span></li>
+          <li class="stats__item"><span class="stats__value">98%</span><span class="stats__label">повторних звернень</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== ХТО МИ ТАКІ ==================== -->
+    <section class="section section--cream" aria-labelledby="who-title">
+      <div class="container about-who__inner">
+        <figure class="about-who__media">
+          <img class="about-who__img" src="images/office.png" alt="Світлий затишний офіс NikaTravel" width="568" height="400" loading="lazy">
+        </figure>
+        <div class="about-who__content">
+          <h2 class="about-who__title" id="who-title">Хто ми такі?</h2>
+          <p class="about-who__text">Ми — київська туристична агенція, яка з 2017 року допомагає українцям відкривати світ. Починали з невеликого офісу та кількох напрямків, а сьогодні співпрацюємо з провідними туроператорами Європи та Азії.</p>
+          <p class="about-who__text">Для нас подорож — це не просто путівка, а історія, яку ви згадуватимете роками. Тому кожен тур ми підбираємо індивідуально, враховуючи ваші інтереси, ритм і бюджет.</p>
+
+          <input class="about-who__toggle visually-hidden" id="about-more" type="checkbox">
+          <div class="about-who__more" id="about-more-text">
+            <p class="about-who__text">Наші менеджери особисто відвідують готелі та курорти, які пропонують клієнтам. Ми знаємо, де найкращі пляжі, які екскурсії варті уваги та як уникнути туристичних пасток.</p>
+            <p class="about-who__text">Ми беремо на себе всі організаційні питання: бронювання, страхування, трансфери, візову підтримку. Вам залишається лише пакувати валізу та насолоджуватися.</p>
+            <p class="about-who__text">Понад 1200 клієнтів уже довірили нам свій відпочинок, і більшість з них повертаються знову. Це найкраща оцінка нашої роботи.</p>
+          </div>
+          <label class="about-who__label link" for="about-more" aria-controls="about-more-text">
+            <span class="about-who__label-more">Дізнатись більше</span>
+            <span class="about-who__label-less">Згорнути</span>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== НАШІ ЦІННОСТІ ==================== -->
+    <section class="section" aria-labelledby="values-title">
+      <div class="container">
+        <h2 class="section__title" id="values-title">Наші цінності</h2>
+        <div class="values">
+          <article class="value-card">
+              <h3 class="value-card__title">Надійність</h3>
+            <p class="value-card__text">Працюємо тільки з перевіреними партнерами та завжди виконуємо обіцянки. Ваш спокій — наш пріоритет.</p>
+          </article>
+          <article class="value-card">
+              <h3 class="value-card__title">Індивідуальний підхід</h3>
+            <p class="value-card__text">Кожна подорож унікальна, як і кожен мандрівник. Ми створюємо маршрути саме під вас.</p>
+          </article>
+          <article class="value-card">
+              <h3 class="value-card__title">Прозорість</h3>
+            <p class="value-card__text">Чесні ціни без прихованих платежів. Ви завжди знаєте, за що платите і що отримуєте.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ЦИТАТА ==================== -->
+    <section class="quote-banner" aria-label="Цитата">
+      <blockquote class="container">
+        <p>«Подорожі - це більше, ніж просто нові місця. Це нові версії вас.»</p>
+      </blockquote>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__about">
+        <a href="index.html" class="logo" aria-label="NikaTravel — на головну">Nika<span class="logo__accent">Travel</span></a>
+        <p class="footer__text">Ми допомагаємо знайти ідеальну подорож — від першої мрії до повернення додому з яскравими спогадами.</p>
+        <p class="footer__copy">© 2025 NikaTravel. Усі права захищені</p>
+      </div>
+      <nav aria-label="Компанія">
+        <h2 class="footer__title">Компанія</h2>
+        <ul class="footer__list">
+          <li><a class="footer__link" href="about.html">Про нас</a></li>
+          <li><a class="footer__link" href="tours.html">Подорожі/Тури</a></li>
+          <li><a class="footer__link" href="index.html#reviews-title">Відгуки</a></li>
+          <li><a class="footer__link" href="#">Блог</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Подорожні питання">
+        <h2 class="footer__title">Подорожні питання</h2>
+        <ul class="footer__list">
+          <li><a class="footer__link" href="#">Ваші запитання</a></li>
+          <li><a class="footer__link" href="#">Умови</a></li>
+          <li><a class="footer__link" href="#">Страхування</a></li>
+          <li><a class="footer__link" href="#">Документи</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="footer__title">Контакти</h2>
+        <address class="footer__contacts">
+          <a class="footer__link" href="tel:+380441234567">+380 44 123 45 67</a>
+          <a class="footer__link" href="mailto:info@nikatravel.ua">info@nikatravel.ua</a>
+          <span>м. Київ, вул. Хрещатик, 1</span>
+        </address>
+        <form class="footer__subscribe" id="subscribe-form" action="#" method="post" novalidate>
+          <p class="footer__subscribe-title">Підписатися на новини</p>
+          <div class="subscribe">
+            <label class="visually-hidden" for="subscribe-email">Ваш email</label>
+            <input class="subscribe__input" id="subscribe-email" type="email" name="email" placeholder="Ваш email" autocomplete="email" required>
+            <button class="btn btn--primary subscribe__btn" type="submit">OK</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

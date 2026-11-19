@@ -1,0 +1,157 @@
+/* ==========================================================================
+   BASE — типографіка, контейнер, секції, кнопки
+   ========================================================================== */
+
+body {
+  font-family: var(--font-base);
+  font-size: var(--fs-base);
+  font-weight: 400;
+  line-height: var(--lh-base);
+  color: var(--color-text);
+  background-color: var(--color-white);
+}
+
+/* ---------- Типографіка ---------- */
+h1,
+h2,
+h3 {
+  line-height: var(--lh-tight);
+  color: var(--color-text);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+}
+
+p {
+  font-size: var(--fs-base);
+}
+
+/* ---------- Доступність ---------- */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---------- Контейнер ---------- */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  padding-inline: 24px;
+  margin-inline: auto;
+}
+
+/* ---------- Секції ---------- */
+.section {
+  padding-block: var(--section-py);
+}
+
+.section--cream {
+  background-color: var(--color-bg-cream);
+}
+
+.section__title {
+  margin-bottom: var(--space-48);
+  text-align: center;
+}
+
+.section__subtitle {
+  max-width: 640px;
+  margin: calc(var(--space-16) * -2) auto var(--space-48);
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+/* ---------- Кнопки ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  padding: 12px 28px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition),
+    border-color var(--transition), transform var(--transition);
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+.btn--outline {
+  background-color: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn--white {
+  background-color: var(--color-white);
+  border-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+.btn--white:hover {
+  background-color: var(--color-bg-cream);
+  border-color: var(--color-bg-cream);
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.btn--lg {
+  padding: 14px 32px;
+  font-size: var(--fs-base);
+}
+
+/* ---------- Посилання-акцент ---------- */
+.link {
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+.link:hover {
+  color: var(--color-primary-dark);
+}

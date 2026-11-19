@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="NikaTravel — туристична агенція. Індивідуальний підбір турів, надійні партнери, підтримка 24/7.">
+  <title>NikaTravel — Подорожі, які починаються з мрії</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/mobile.css?v=7">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <input class="nav-toggle visually-hidden" id="nav-toggle" type="checkbox" aria-label="Відкрити меню" aria-controls="mobile-nav">
+    <div class="container header__inner">
+      <label class="burger" for="nav-toggle" aria-hidden="true">
+        <svg class="burger__icon burger__icon--open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <svg class="burger__icon burger__icon--close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </label>
+      <a href="index.html" class="logo" aria-label="NikaTravel — на головну">
+        <img class="logo__globe" src="images/globe.svg" alt="" width="28" height="28">
+        <span>Nika<span class="logo__accent">Travel</span></span>
+      </a>
+      <nav class="nav" aria-label="Головна навігація">
+        <ul class="nav__list">
+          <li><a class="nav__link nav__link--active" href="index.html" aria-current="page">Головна</a></li>
+          <li><a class="nav__link" href="tours.html">Тури</a></li>
+          <li><a class="nav__link" href="about.html">Про нас</a></li>
+          <li><a class="nav__link" href="contacts.html">Контакти</a></li>
+        </ul>
+      </nav>
+      <a href="contacts.html" class="btn btn--primary header__cta">Підібрати тур</a>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Мобільна навігація">
+      <ul class="mobile-nav__list">
+        <li><a class="mobile-nav__link mobile-nav__link--active" href="index.html" aria-current="page">Головна</a></li>
+        <li><a class="mobile-nav__link" href="tours.html">Тури</a></li>
+        <li><a class="mobile-nav__link" href="about.html">Про нас</a></li>
+        <li><a class="mobile-nav__link" href="contacts.html">Контакти</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero__content">
+          <h1 class="hero__title" id="hero-title">Подорожі, які<br class="hero__title-break"> <span class="hero__title-line">починаються з<br class="hero__title-phone-break"> мрії</span></h1>
+          <p class="hero__text">Відкрийте для себе найкращі куточки планети з комфортом та надійністю. Ми дбаємо про кожну деталь вашої ідеальної відпустки.</p>
+          <a href="tours.html" class="btn btn--primary btn--lg">Знайти тур</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ПОПУЛЯРНІ НАПРЯМКИ ==================== -->
+    <section class="section section--cream popular-destinations" aria-labelledby="popular-title">
+      <div class="container">
+        <h2 class="section__title" id="popular-title">Популярні напрямки</h2>
+        <div class="tour-grid">
+
+          <article class="tour-card">
+            <figure class="tour-card__media">
+              <img class="tour-card__img" src="images/rome.jpg" alt="Колізей у Римі на тлі блакитного неба" width="379" height="170" loading="lazy">
+            </figure>
+            <div class="tour-card__body">
+              <div class="tour-card__head">
+                <h3 class="tour-card__title">Італія</h3>
+                <p class="tour-card__price">від 450 €</p>
+              </div>
+              <a href="tours.html?country=it" class="btn btn--outline btn--block tour-card__btn">Детальніше →</a>
+            </div>
+          </article>
+
+          <article class="tour-card">
+            <figure class="tour-card__media">
+              <img class="tour-card__img" src="images/turkey.jpg" alt="Блакитна мечеть у Стамбулі" width="379" height="170" loading="lazy">
+            </figure>
+            <div class="tour-card__body">
+              <div class="tour-card__head">
+                <h3 class="tour-card__title">Туреччина</h3>
+                <p class="tour-card__price">від 380 €</p>
+              </div>
+              <a href="tours.html?country=tr" class="btn btn--outline btn--block tour-card__btn">Детальніше →</a>
+            </div>
+          </article>
+
+          <article class="tour-card">
+            <figure class="tour-card__media">
+              <img class="tour-card__img" src="images/santorini.jpg" alt="Білі будиночки та сині куполи Санторіні" width="379" height="170" loading="lazy">
+            </figure>
+            <div class="tour-card__body">
+              <div class="tour-card__head">
+                <h3 class="tour-card__title">Греція</h3>
+                <p class="tour-card__price">від 420 €</p>
+              </div>
+              <a href="tours.html?country=gr" class="btn btn--outline btn--block tour-card__btn">Детальніше →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ЧОМУ ОБИРАЮТЬ НАС ==================== -->
+    <section class="section" aria-labelledby="why-title">
+      <div class="container">
+        <h2 class="section__title" id="why-title">Чому обирають нас</h2>
+        <ul class="features">
+          <li class="feature">
+            <span class="feature__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 2.8l2.8 5.7 6.3.9-4.55 4.43 1.07 6.27L12 17.14l-5.62 2.96 1.07-6.27L2.9 9.4l6.3-.9L12 2.8z"/></svg>
+            </span>
+            <h3 class="feature__title">Індивідуальний підбір туру</h3>
+            <p class="feature__text">Враховуємо ваші побажання, бюджет і стиль відпочинку.</p>
+          </li>
+          <li class="feature">
+            <span class="feature__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 2.8l2.8 5.7 6.3.9-4.55 4.43 1.07 6.27L12 17.14l-5.62 2.96 1.07-6.27L2.9 9.4l6.3-.9L12 2.8z"/></svg>
+            </span>
+            <h3 class="feature__title">Надійні партнери</h3>
+            <p class="feature__text">Працюємо лише з перевіреними туроператорами та готелями.</p>
+          </li>
+          <li class="feature">
+            <span class="feature__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 2.8l2.8 5.7 6.3.9-4.55 4.43 1.07 6.27L12 17.14l-5.62 2.96 1.07-6.27L2.9 9.4l6.3-.9L12 2.8z"/></svg>
+            </span>
+            <h3 class="feature__title">Підтримка 24/7</h3>
+            <p class="feature__text">Ми на зв'язку до, під час і після вашої подорожі.</p>
+          </li>
+          <li class="feature">
+            <span class="feature__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 2.8l2.8 5.7 6.3.9-4.55 4.43 1.07 6.27L12 17.14l-5.62 2.96 1.07-6.27L2.9 9.4l6.3-.9L12 2.8z"/></svg>
+            </span>
+            <h3 class="feature__title">Вигідні ціни</h3>
+            <p class="feature__text">Найкращі пропозиції без прихованих платежів і переплат.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== CTA ==================== -->
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="container">
+        <h2 class="cta__title" id="cta-title">Не знаєте, куди поїхати?</h2>
+        <p class="cta__text">Залиште заявку — і наш експерт безкоштовно проконсультує вас та підбере ідеальний варіант відпочинку саме для вас.</p>
+        <a href="contacts.html" class="btn btn--white btn--lg">Отримати консультацію</a>
+      </div>
+    </section>
+
+    <!-- ==================== ВІДГУКИ ==================== -->
+    <section class="section" aria-labelledby="reviews-title">
+      <div class="container">
+        <h2 class="section__title" id="reviews-title">Відгуки наших клієнтів</h2>
+        <div class="reviews">
+
+          <article class="review">
+            <header class="review__head">
+              <div>
+                <h3 class="review__name">Олена Коваленко</h3>
+              </div>
+            </header>
+            <p class="review__text">Дякую NikaTravel за чудову поїздку до Італії! Усе було організовано ідеально: зручні перельоти, затишний готель у центрі Рима та цікаві екскурсії. Обов'язково звернуся ще.</p>
+          </article>
+
+          <article class="review">
+            <header class="review__head">
+              <div>
+                <h3 class="review__name">Андрій Мельник</h3>
+              </div>
+            </header>
+            <p class="review__text">Відпочивали всією родиною в Туреччині. Менеджер підібрав готель з урахуванням усіх наших побажань, а підтримка відповідала навіть уночі. Рекомендую!</p>
+          </article>
+
+          <article class="review">
+            <header class="review__head">
+              <div>
+                <h3 class="review__name">Марія Петренко</h3>
+              </div>
+            </header>
+            <p class="review__text">Санторіні — мрія, яка стала реальністю завдяки цій команді. Професійно, швидко і з душею. Ціна приємно здивувала, а враження залишились на все життя.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__about">
+        <a href="index.html" class="logo" aria-label="NikaTravel — на головну">Nika<span class="logo__accent">Travel</span></a>
+        <p class="footer__text">Ми допомагаємо знайти ідеальну подорож — від першої мрії до повернення додому з яскравими спогадами.</p>
+        <p class="footer__copy">© 2025 NikaTravel. Усі права захищені</p>
+      </div>
+      <nav aria-label="Компанія">
+        <h2 class="footer__title">Компанія</h2>
+        <ul class="footer__list">
+          <li><a class="footer__link" href="about.html">Про нас</a></li>
+          <li><a class="footer__link" href="tours.html">Подорожі/Тури</a></li>
+          <li><a class="footer__link" href="index.html#reviews-title">Відгуки</a></li>
+          <li><a class="footer__link" href="#">Блог</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Подорожні питання">
+        <h2 class="footer__title">Подорожні питання</h2>
+        <ul class="footer__list">
+          <li><a class="footer__link" href="#">Ваші запитання</a></li>
+          <li><a class="footer__link" href="#">Умови</a></li>
+          <li><a class="footer__link" href="#">Страхування</a></li>
+          <li><a class="footer__link" href="#">Документи</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="footer__title">Контакти</h2>
+        <address class="footer__contacts">
+          <a class="footer__link" href="tel:+380441234567">+380 44 123 45 67</a>
+          <a class="footer__link" href="mailto:info@nikatravel.ua">info@nikatravel.ua</a>
+          <span>м. Київ, вул. Хрещатик, 1</span>
+        </address>
+        <form class="footer__subscribe" id="subscribe-form" action="#" method="post" novalidate>
+          <p class="footer__subscribe-title">Підписатися на новини</p>
+          <div class="subscribe">
+            <label class="visually-hidden" for="subscribe-email">Ваш email</label>
+            <input class="subscribe__input" id="subscribe-email" type="email" name="email" placeholder="Ваш email" autocomplete="email" required>
+            <button class="btn btn--primary subscribe__btn" type="submit">OK</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

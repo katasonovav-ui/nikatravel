@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Каталог турів NikaTravel: Італія, Туреччина, Греція, Іспанія, Чорногорія, Франція.">
+  <title>Тури — NikaTravel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/mobile.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <input class="nav-toggle visually-hidden" id="nav-toggle" type="checkbox" aria-label="Відкрити меню" aria-controls="mobile-nav">
+    <div class="container header__inner">
+      <label class="burger" for="nav-toggle" aria-hidden="true">
+        <svg class="burger__icon burger__icon--open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <svg class="burger__icon burger__icon--close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </label>
+      <a href="index.html" class="logo" aria-label="NikaTravel — на головну">
+        <img class="logo__globe" src="images/globe.svg" alt="" width="28" height="28">
+        <span>Nika<span class="logo__accent">Travel</span></span>
+      </a>
+      <nav class="nav" aria-label="Головна навігація">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Головна</a></li>
+          <li><a class="nav__link nav__link--active" href="tours.html" aria-current="page">Тури</a></li>
+          <li><a class="nav__link" href="about.html">Про нас</a></li>
+          <li><a class="nav__link" href="contacts.html">Контакти</a></li>
+        </ul>
+      </nav>
+      <a href="contacts.html" class="btn btn--primary header__cta">Підібрати тур</a>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Мобільна навігація">
+      <ul class="mobile-nav__list">
+        <li><a class="mobile-nav__link" href="index.html">Головна</a></li>
+        <li><a class="mobile-nav__link mobile-nav__link--active" href="tours.html" aria-current="page">Тури</a></li>
+        <li><a class="mobile-nav__link" href="about.html">Про нас</a></li>
+        <li><a class="mobile-nav__link" href="contacts.html">Контакти</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- ==================== ЗАГОЛОВОК СТОРІНКИ ==================== -->
+    <section class="page-head" aria-labelledby="tours-title">
+      <div class="container">
+        <h1 class="page-head__title" id="tours-title">Знайдіть свою наступну подорож</h1>
+        <p class="page-head__text">Оберіть серед десятків перевірених напрямків той, що відгукнеться вашому серцю</p>
+      </div>
+    </section>
+
+    <!-- ==================== ТУРИ ==================== -->
+    <section class="tours" aria-label="Каталог турів">
+      <div class="container">
+
+        <!-- Фільтри -->
+        <form class="filters form" id="tour-filters" action="#" method="get" role="search" novalidate>
+          <div class="form__field filters__field">
+            <label class="form__label filters__label" for="filter-country">Країна</label>
+            <select class="form__input form__select" id="filter-country" name="country" data-dropdown>
+              <option value="">Всі країни</option>
+              <option value="it">Італія</option>
+              <option value="tr">Туреччина</option>
+              <option value="gr">Греція</option>
+              <option value="es">Іспанія</option>
+              <option value="me">Чорногорія</option>
+              <option value="fr">Франція</option>
+            </select>
+          </div>
+          <div class="form__field filters__field">
+            <label class="form__label filters__label" for="filter-budget">Бюджет</label>
+            <select class="form__input form__select" id="filter-budget" name="budget" data-dropdown>
+              <option value="">Будь-який</option>
+              <option value="0-500">до 500 €</option>
+              <option value="500-1000">500-1000 €</option>
+              <option value="1000+">від 1000 €</option>
+            </select>
+          </div>
+          <div class="form__field filters__field">
+            <label class="form__label filters__label" for="filter-duration">Тривалість</label>
+            <select class="form__input form__select" id="filter-duration" name="duration" data-dropdown>
+              <option value="">Будь-яка</option>
+              <option value="3-5">3-5 ночей</option>
+              <option value="7-10">7-10 ночей</option>
+              <option value="14+">14+ ночей</option>
+            </select>
+          </div>
+          <button class="btn btn--primary filters__btn" type="submit">Знайти</button>
+        </form>
+
+        <!-- Сортування -->
+        <div class="tours__toolbar">
+          <p class="visually-hidden" id="tours-count" aria-live="polite"></p>
+          <button class="tours__reset link" id="tours-reset" type="button" hidden>Скинути фільтри</button>
+          <div class="sort">
+            <label class="sort__label" for="sort-select">Сортувати:</label>
+            <select class="sort__select" id="sort-select" name="sort" data-dropdown="sort">
+              <option value="popular">За популярністю</option>
+              <option value="price-asc">За ціною (спочатку дешевші)</option>
+              <option value="price-desc">За ціною (спочатку дорожчі)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Сітка турів -->
+        <div class="tour-grid" id="tour-grid">
+
+          <article class="tour-card" data-title="Рим" data-country="it" data-country-name="Італія" data-category="city excursion" data-price="450" data-nights="5" data-popularity="100">
+            <figure class="tour-card__media">
+              <img class="tour-card__img" src="images/rome.jpg" alt="Колізей у Римі" width="379" height="170" loading="lazy">
+            </figure>
+            <div class="tour-card__body">
+              <div class="tour-card__head">
+                <h3 class="tour-card__title">Рим, <span class="tour-card__country">Італія</span></h3>
+                <p class="tour-card__price-box"><span class="tour-card__price">від 450 €</span><span class="tour-card__duration">5 ночей</span></p>
+              </div>
+              <a href="contacts.html?tour=%D0%A0%D0%B8%D0%BC" class="btn btn--outline btn--block tour-card__btn">Детальніше →</a>
+            </div>
+          </article>
+
+          <article class="tour-card" data-title="Анталія" data-country="tr" data-country-name="Туреччина" data-category="beach family" data-price="380" data-nights="7" data-popularity="95">
+            <figure class="tour-card__media">
+              <img class="tour-card__img" src="images/turkey.jpg" alt="Мечеть із мінаретами в Туреччині" width="379" height="170" loading="lazy">
+            </figure>
+            <div class="tour-card__body">
+              <div class="tour-card__head">
+                <h3 class="tour-card__title">Анталія, <span class="tour-card__country">Туреччина</span></h3>
+                <p class="tour-card__price-box"><span class="tour-card__price">від 380 €</span><span class="tour-card__duration">7 ночей</span></p>
+              </div>
+              <a href="contacts.html?tour=%D0%90%D0%BD%D1%82%D0%B0%D0%BB%D1%96%D1%8F" class="btn btn--outline btn--block tour-card__btn">Детальніше →</a>
+            </div>
+          </article>
+
+          <article class="tour-card" data-title="Санторіні" data-country="gr" data-country-name="Греція" data-category="beach" data-price="420" data-nights="4" data-popularity="90">
+            <figure class="tour-card__media">
+              <img class="tour-card__img" src="images/santorini.jpg" alt="Санторіні, Греція" width="379" height="170" loading="lazy">
+            </figure>
+            <div class="tour-card__body">
+              <div class="tour-card__head">
+                <h3 class="tour-card__title">Санторіні, <span class="tour-card__country">Греція</span></h3>
+                <p class="tour-card__price-box"><span class="tour-card__price">від 420 €</span><span class="tour-card__duration">4 ночі</span></p>
+              </div>
+              <a href="contacts.html?tour=%D0%A1%D0%B0%D0%BD%D1%82%D0%BE%D1%80%D1%96%D0%BD%D1%96" class="btn btn--outline btn--block tour-card__btn">Детальніше →</a>
+            </div>
+          </article>
+
+          <article class="tour-card" data-title="Барселона" data-country="es" data-country-name="Іспанія" data-category="city beach" data-price="540" data-nights="5" data-popularity="85">
+            <figure class="tour-card__media">
+              <img class="tour-card__img" src="images/barcelona.jpg" alt="Архітектура Барселони" width="379" height="170" loading="lazy">
+            </figure>
+            <div class="tour-card__body">
+              <div class="tour-card__head">
+                <h3 class="tour-card__title">Барселона, <span class="tour-card__country">Іспанія</span></h3>
+                <p class="tour-card__price-box"><span class="tour-card__price">від 540 €</span><span class="tour-card__duration">5 ночей</span></p>
+              </div>
+              <a href="contacts.html?tour=%D0%91%D0%B0%D1%80%D1%81%D0%B5%D0%BB%D0%BE%D0%BD%D0%B0" class="btn btn--outline btn--block tour-card__btn">Детальніше →</a>
+            </div>
+          </article>
+
+          <article class="tour-card" data-title="Будва" data-country="me" data-country-name="Чорногорія" data-category="beach family" data-price="410" data-nights="10" data-popularity="80">
+            <figure class="tour-card__media">
+              <img class="tour-card__img" src="images/budva.jpg" alt="Старе місто на Адріатичному узбережжі" width="379" height="170" loading="lazy">
+            </figure>
+            <div class="tour-card__body">
+              <div class="tour-card__head">
+                <h3 class="tour-card__title">Будва, <span class="tour-card__country">Чорногорія</span></h3>
+                <p class="tour-card__price-box"><span class="tour-card__price">від 410 €</span><span class="tour-card__duration">10 ночей</span></p>
+              </div>
+              <a href="contacts.html?tour=%D0%91%D1%83%D0%B4%D0%B2%D0%B0" class="btn btn--outline btn--block tour-card__btn">Детальніше →</a>
+            </div>
+          </article>
+
+          <article class="tour-card" data-title="Париж" data-country="fr" data-country-name="Франція" data-category="city excursion" data-price="490" data-nights="3" data-popularity="75">
+            <figure class="tour-card__media">
+              <img class="tour-card__img" src="images/paris.jpg" alt="Ейфелева вежа в Парижі" width="379" height="170" loading="lazy">
+            </figure>
+            <div class="tour-card__body">
+              <div class="tour-card__head">
+                <h3 class="tour-card__title">Париж, <span class="tour-card__country">Франція</span></h3>
+                <p class="tour-card__price-box"><span class="tour-card__price">від 490 €</span><span class="tour-card__duration">3 ночі</span></p>
+              </div>
+              <a href="contacts.html?tour=%D0%9F%D0%B0%D1%80%D0%B8%D0%B6" class="btn btn--outline btn--block tour-card__btn">Детальніше →</a>
+            </div>
+          </article>
+
+          <article class="tour-card" data-title="Венеція" data-country="it" data-country-name="Італія" data-category="excursion city" data-price="560" data-nights="3" data-popularity="70">
+            <figure class="tour-card__media">
+              <img class="tour-card__img" src="https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&w=800&q=80" alt="Гондоли на каналі у Венеції" width="379" height="170" loading="lazy">
+            </figure>
+            <div class="tour-card__body">
+              <div class="tour-card__head">
+                <h3 class="tour-card__title">Венеція, <span class="tour-card__country">Італія</span></h3>
+                <p class="tour-card__price-box"><span class="tour-card__price">від 560 €</span><span class="tour-card__duration">3 ночі</span></p>
+              </div>
+              <a href="contacts.html?tour=%D0%92%D0%B5%D0%BD%D0%B5%D1%86%D1%96%D1%8F" class="btn btn--outline btn--block tour-card__btn">Детальніше →</a>
+            </div>
+          </article>
+
+          <article class="tour-card" data-title="Стамбул" data-country="tr" data-country-name="Туреччина" data-category="city excursion" data-price="310" data-nights="4" data-popularity="65">
+            <figure class="tour-card__media">
+              <img class="tour-card__img" src="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=800&q=80" alt="Панорама Стамбула з видом на Босфор" width="379" height="170" loading="lazy">
+            </figure>
+            <div class="tour-card__body">
+              <div class="tour-card__head">
+                <h3 class="tour-card__title">Стамбул, <span class="tour-card__country">Туреччина</span></h3>
+                <p class="tour-card__price-box"><span class="tour-card__price">від 310 €</span><span class="tour-card__duration">4 ночі</span></p>
+              </div>
+              <a href="contacts.html?tour=%D0%A1%D1%82%D0%B0%D0%BC%D0%B1%D1%83%D0%BB" class="btn btn--outline btn--block tour-card__btn">Детальніше →</a>
+            </div>
+          </article>
+
+          <article class="tour-card" data-title="Крит" data-country="gr" data-country-name="Греція" data-category="beach family" data-price="1150" data-nights="14" data-popularity="60">
+            <figure class="tour-card__media">
+              <img class="tour-card__img" src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80" alt="Узбережжя грецького острова" width="379" height="170" loading="lazy">
+            </figure>
+            <div class="tour-card__body">
+              <div class="tour-card__head">
+                <h3 class="tour-card__title">Крит, <span class="tour-card__country">Греція</span></h3>
+                <p class="tour-card__price-box"><span class="tour-card__price">від 1150 €</span><span class="tour-card__duration">14 ночей</span></p>
+              </div>
+              <a href="contacts.html?tour=%D0%9A%D1%80%D0%B8%D1%82" class="btn btn--outline btn--block tour-card__btn">Детальніше →</a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="tours__empty" id="tours-empty" hidden>
+          <p class="tours__empty-title">За вашим запитом турів не знайдено</p>
+          <p class="tours__empty-text">Спробуйте змінити параметри пошуку або залиште заявку — ми підберемо тур індивідуально.</p>
+          <div class="tours__empty-actions">
+            <button class="btn btn--outline" type="button" data-action="reset-filters">Скинути фільтри</button>
+            <a href="contacts.html" class="btn btn--primary">Залишити заявку</a>
+          </div>
+        </div>
+
+        <div class="tours__more">
+          <button class="btn btn--primary btn--lg" id="tours-more" type="button">Показати більше</button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__about">
+        <a href="index.html" class="logo" aria-label="NikaTravel — на головну">Nika<span class="logo__accent">Travel</span></a>
+        <p class="footer__text">Ми допомагаємо знайти ідеальну подорож — від першої мрії до повернення додому з яскравими спогадами.</p>
+        <p class="footer__copy">© 2025 NikaTravel. Усі права захищені</p>
+      </div>
+      <nav aria-label="Компанія">
+        <h2 class="footer__title">Компанія</h2>
+        <ul class="footer__list">
+          <li><a class="footer__link" href="about.html">Про нас</a></li>
+          <li><a class="footer__link" href="tours.html">Подорожі/Тури</a></li>
+          <li><a class="footer__link" href="index.html#reviews-title">Відгуки</a></li>
+          <li><a class="footer__link" href="#">Блог</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Подорожні питання">
+        <h2 class="footer__title">Подорожні питання</h2>
+        <ul class="footer__list">
+          <li><a class="footer__link" href="#">Ваші запитання</a></li>
+          <li><a class="footer__link" href="#">Умови</a></li>
+          <li><a class="footer__link" href="#">Страхування</a></li>
+          <li><a class="footer__link" href="#">Документи</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="footer__title">Контакти</h2>
+        <address class="footer__contacts">
+          <a class="footer__link" href="tel:+380441234567">+380 44 123 45 67</a>
+          <a class="footer__link" href="mailto:info@nikatravel.ua">info@nikatravel.ua</a>
+          <span>м. Київ, вул. Хрещатик, 1</span>
+        </address>
+        <form class="footer__subscribe" id="subscribe-form" action="#" method="post" novalidate>
+          <p class="footer__subscribe-title">Підписатися на новини</p>
+          <div class="subscribe">
+            <label class="visually-hidden" for="subscribe-email">Ваш email</label>
+            <input class="subscribe__input" id="subscribe-email" type="email" name="email" placeholder="Ваш email" autocomplete="email" required>
+            <button class="btn btn--primary subscribe__btn" type="submit">OK</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
